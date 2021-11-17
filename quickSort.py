@@ -8,7 +8,6 @@ def quickSort(nums:list):
 
     return quickSort(left) + [nums[0]] + quickSort(right)
 
-
 # Method 2
 def quickSort(nums:list):
     n = len(nums)
