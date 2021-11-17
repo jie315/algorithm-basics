@@ -2,7 +2,7 @@ def shellSort(nums:list):
     n = len(nums)
     if n <= 1:
         return nums
-
+    
     # 设置步长
     step = n // 2 
     while step > 0:
