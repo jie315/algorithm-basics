@@ -2,7 +2,7 @@ def heapSort(nums:list):
     n = len(nums)
     if n <= 1:
         return nums
-
+    
     result = []
     while len(nums) > 0:
         n = len(nums)
