@@ -21,3 +21,4 @@ def mergeSort(nums:list):
     right = mergeSort(nums[mid:])
 
     return merge(left, right)
+
