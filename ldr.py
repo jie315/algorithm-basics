@@ -7,15 +7,15 @@ class TreeNode:
     self.right = right
 """
 
-# 前序遍历：左根右
+# 中序遍历：左根右
 
 # 递归
 def ldr(root):
   if not root: return []
-  return vlr(root.left) + [root.val] + vlr(root.right)
+  return ldr(root.left) + [root.val] + ldr(root.right)
 
 # 循环
-def vlr(root):
+def ldr(root):
   stack = []
   result = []
   nd = root
