@@ -7,12 +7,12 @@ class TreeNode:
     self.right = right
 """
 
-# 前序遍历：左根右
+# 前序遍历：根左右
 
 # 递归
 def vlr(root):
   if not root: return []
-  return vlr(root.left) + [root.val] + vlr(root.right)
+  return [root.val] + vlr(root.left) + vlr(root.right)
 
 # 循环
 def vlr(root):
@@ -21,11 +21,11 @@ def vlr(root):
   nd = root
   while len(stack) > 0 or nd != None:
     if nd:
-      stack.append(nd)
+      result.append(nd.val)
+      stack.append(nd.right)
       nd = nd.left
     else:
       nd = stack.pop()
-      result.append(nd.val)
-      nd = nd.right
   return result
+  
       
